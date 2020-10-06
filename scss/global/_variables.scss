@@ -1,0 +1,55 @@
+$colors: (
+    primary       : #2140E8,
+    primaryAccent : #4460F7,
+    accent        : #F9A52B,
+    light         : #F0F1F5,
+    gray          : #E0E2EA,
+    darkGray      : #B9BDCF,
+    silver        : #9194A5,
+    dark          : #1A1B1D,
+    white         : #FFFFFF,
+    whiteLight    : #F2F2F2,
+    black         : #000000,
+) !default;
+
+$breakpoints: (
+    'small'   : 500px,
+    'medium'  : 767px,
+    'large'   : 1024px,
+    'laptop'  : 1200px,
+    'desktop' : 1400px,
+) !default;
+
+
+/// Mixin to manage positioning.
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+/// Mixin to manage responsive breakpoints
+@mixin respond-to($breakpoint, $type: 'max-width') {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (#{$type}: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn 'Wrong breakpoint.';
+    }
+}
+
+/// Function to print colors.
+@function color($colorName) {
+    @if map-has-key($colors, $colorName) {
+        @return map-get($colors, $colorName);
+    }
+
+    @else {
+        @warn 'No color by that name.';
+    }
+}

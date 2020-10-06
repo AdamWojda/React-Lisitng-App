@@ -1,0 +1,42 @@
+.filters {
+    display: flex;
+
+    @include respond-to('medium') {
+        justify-content: flex-end;
+    }
+    @include respond-to('small') {
+        justify-content: space-between;
+    }
+
+    &__single {
+        display: flex;
+        align-items: center;
+        padding: 0 .7rem 0 2.5rem;
+
+        p {
+            font-size: 1.4rem;
+            margin-left: .8rem;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        @include respond-to('small') {
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__input {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: .9rem;
+
+        .MuiSvgIcon-root {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}

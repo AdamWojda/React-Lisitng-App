@@ -1,0 +1,60 @@
+.button {
+    $this: &;
+    display: inline-block;
+    width: 100%;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .4rem;
+
+    &--m {
+        font-size: 1.4rem;
+        border-radius: .4rem;
+        padding: 1rem;
+        min-width: 9rem;
+    }
+
+    &--xl {
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+        color: color(white);
+    }
+
+    &--xxl {
+        padding: 1.6rem 2rem;
+        font-size: 1.6rem;
+        color: color(white);
+    }
+
+    &--blue {
+        color: color(white);
+
+        &#{$this}--solid {
+            background: color(primaryAccent);
+        }
+    }
+
+    &--white {
+        color: color(primaryAccent);
+        border-color: color(primaryAccent);
+
+        &#{$this}--solid {
+            background: color(white);
+        }
+    }
+
+    &--disabled {
+        filter: grayscale(100%);
+        pointer-events: none;
+    }
+
+    &--bordered {
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    &--auto {
+        width: auto;
+    }
+}
+

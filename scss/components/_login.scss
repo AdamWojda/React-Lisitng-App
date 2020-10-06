@@ -1,0 +1,52 @@
+.login {
+    width: 49.5rem;
+    max-width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 16%;
+
+    @include respond-to('laptop') {
+        width: 100%;
+    }
+
+    & > .heading {
+        margin-bottom: 4rem;
+        font-size: 3rem;
+    }
+
+    &__form {
+        .button {
+            margin-top: 4rem;
+        }
+
+        &__input {
+            height: 6rem;
+            margin-bottom: 3rem;
+            width: 100%;
+            display: block;
+
+            .MuiFormLabel-root {
+                font-size: 14px;
+                color: color(black);
+            }
+
+            .MuiOutlinedInput-input {
+                font-size: 14px;
+            }
+
+            .PrivateNotchedOutline-legendNotched-4 {
+                display: none;
+            }
+
+            .PrivateNotchedOutline-root-1 {
+                top: 0;
+            }
+        }
+
+        input[type='text'] {
+            height: 100%;
+        }
+    }
+}

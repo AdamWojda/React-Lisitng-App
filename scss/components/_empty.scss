@@ -1,0 +1,11 @@
+.empty {
+    &__heading {
+        display: block;
+        padding: 2.2rem 0 1rem;
+    }
+
+    &__text {
+        color: color(silver);
+        font-size: 1.4rem;
+    }
+}

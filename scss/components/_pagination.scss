@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    .MuiPaginationItem-sizeLarge {
+        font-size: 1.4rem;
+    }
+
+    .MuiPaginationItem-textPrimary {
+        &.Mui-selected {
+            background-color: transparent;
+            color: color(primary);
+            font-weight: bold;
+            &:hover, &.Mui-focusVisible {
+                background: transparent;
+            }
+        }
+    }
+
+    .MuiPaginationItem-page {
+        svg {
+            display: none;
+        }
+    }
+
+    [aria-label="Go to next page"]:before {content: "Next";}
+    [aria-label="Go to previous page"]:before {content: "Prev";}
+
+    @include respond-to('small') {
+        .MuiPaginationItem-sizeLarge {
+            min-width: 25px;
+        }
+    }
+}

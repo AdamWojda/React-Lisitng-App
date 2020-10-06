@@ -1,0 +1,42 @@
+// Data.
+$module_data: (
+    '1': '1',
+    '2': '-n+2',
+    '3': '-n+3',
+    '4': '-n+4',
+    '5': '-n+5'
+);
+// Get background.
+@mixin star_background( $type: 'checked' ) {
+    background: url('../img/#{$type}-star.svg') no-repeat center center;
+    background-size: 1.3rem 1.3rem;
+}
+// Rating.
+.rating {
+    $this: &;
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1.1rem;
+
+    &__star {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: .8rem;
+        @include star_background( 'empty' );
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @each $rating-value, $rating-selector in $module_data {
+        &[data-rating='#{$rating-value}'] {
+            #{$this}__star:nth-child(#{$rating-selector}) {
+                @include star_background();
+            }
+        }
+    }
+}
