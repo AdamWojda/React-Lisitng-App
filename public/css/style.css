@@ -90,7 +90,10 @@ h2.heading, .heading.h2 {
   .button--blue {
     color: #FFFFFF; }
     .button--blue.button--solid {
-      background: #4460F7; }
+      background: #4460F7;
+      transition: background-color .2s linear; }
+      .button--blue.button--solid:hover {
+        background: #2140E8; }
   .button--white {
     color: #4460F7;
     border-color: #4460F7; }
@@ -264,6 +267,13 @@ h2.heading, .heading.h2 {
         border-radius: 8px; }
       .header__search .MuiFormControl-root .MuiButtonBase-root {
         border-radius: 0; }
+      .header__search .MuiFormControl-root .MuiOutlinedInput-root {
+        outline: 0; }
+        .header__search .MuiFormControl-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+          border-color: rgba(0, 0, 0, 0.23); }
+        .header__search .MuiFormControl-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+          border-width: 1px;
+          border-color: rgba(0, 0, 0, 0.23); }
       .header__search .MuiFormControl-root .MuiOutlinedInput-input {
         padding: 15.5px 14px; }
     @media (max-width: 767px) {

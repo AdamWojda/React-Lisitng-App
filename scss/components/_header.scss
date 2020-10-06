@@ -36,6 +36,19 @@
                 border-radius: 0;
             }
 
+            .MuiOutlinedInput-root {
+                outline: 0;
+
+                &:hover .MuiOutlinedInput-notchedOutline {
+                    border-color: rgba(0, 0, 0, 0.23);
+                }
+
+                &.Mui-focused .MuiOutlinedInput-notchedOutline {
+                    border-width: 1px;
+                    border-color: rgba(0, 0, 0, 0.23);
+                }
+            }
+
             .MuiOutlinedInput-input {
                 padding: 15.5px 14px;
             }
