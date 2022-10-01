@@ -2,7 +2,7 @@ import http from "../http-setup";
 import { Params } from 'Interfaces/Product';
 
 const getAll = (data : Params ) => {
-    return http.get("/product", {params: data} );
+    return http.get("/products", {params: data} );
 };
 
 const getAllWithItems = async ( Payload: Params ) => {

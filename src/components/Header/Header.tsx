@@ -41,7 +41,7 @@ export const Header = () => {
                 <div className="container">
                     <div className="header__logo">
                         <h1 className="heading heading--logo">
-                            <Link className="heading__link" to={AppRoute.home}>join.tsh.io</Link></h1>
+                            <Link className="heading__link" to={AppRoute.home}>react.example.io</Link></h1>
                     </div>
                     <div className="header__search">
                         <Text value={FilterWord} onChange={updateTitle} onButtonClick={updateFilter} onKeyDown={updateOnEnter} />

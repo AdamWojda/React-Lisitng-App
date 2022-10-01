@@ -19,7 +19,7 @@ export const Login = () => {
 
                     <div className="loginView__logo">
                         <h1 className="heading heading--logo">
-                            <Link className="heading__link" to={AppRoute.home}>join.tsh.io</Link>
+                            <Link className="heading__link" to={AppRoute.home}>react.example.io</Link>
                         </h1>
                     </div>
                     <div className="login">
