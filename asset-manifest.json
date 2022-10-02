@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/react-listing-app/static/js/main.f9d9aff9.js",
+    "static/media/login-bg.jpg": "/react-listing-app/static/media/login-bg.bbf436aeddb9a0486ebc.jpg",
+    "index.html": "/react-listing-app/index.html",
+    "main.f9d9aff9.js.map": "/react-listing-app/static/js/main.f9d9aff9.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f9d9aff9.js"
+  ]
+}
